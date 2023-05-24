@@ -1,0 +1,9 @@
+﻿Input1,Input2,Input3,Response
+0,0,0,"Hello I am Leo, Your personal local voice assistant. How can I help you?"
+0,0,1,"I am good, And What about you?"
+0,1,0,I'm glad to hear that
+0,1,1,My name is Leo.I Am your personal local voice assistant?
+1,0,0,I can do according to your command. Please feel free to ask any question you have
+1,0,1,"I am Leo, a voice assistant. I am developed by Dibya And Anubhav. I hope I can help you. You can give me commands like- play any song, open applications like youtube, google and also I can search result for you"
+1,1,0,A very good Morning to you. I hope you will have a great day.
+1,1,1,Goodbye! Have a nice day...
