@@ -1,7 +1,7 @@
 import tkinter as tk
 import nltk
 from textblob import TextBlob
-from newspaper import Article  # Corrected import statement
+from newspaper import Article 
 
 #nltk.download('punkt')
 
