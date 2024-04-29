@@ -7,7 +7,7 @@ from newspaper import Article
 
 def summarize():
     url = utext.get('1.0', "end").strip()
-    article_obj = Article(url)  # Renamed the variable to avoid naming conflict
+    article_obj = Article(url)  
     article_obj.download()
     article_obj.parse()
     article_obj.nlp()
@@ -19,7 +19,7 @@ def summarize():
     sentiment.config(state='normal')
 
     title.delete('1.0', "end")
-    title.insert('1.0', article_obj.title)  # Removed extra backslash
+    title.insert('1.0', article_obj.title) 
 
     author.delete('1.0', "end")
     author.insert('1.0', ', '.join(article_obj.authors))  # Convert authors list to a comma-separated string
@@ -52,35 +52,35 @@ title = tk.Text(root, height=1, width=140)
 title.config(state="disabled", bg="#dddddd")
 title.pack()
 
-alabel = tk.Label(root, text="Author")  # Renamed the label
+alabel = tk.Label(root, text="Author")  
 alabel.pack()
 
 author = tk.Text(root, height=1, width=140)
 author.config(state="disabled", bg="#dddddd")
 author.pack()
 
-plabel = tk.Label(root, text="Publication Date")  # Renamed the label
+plabel = tk.Label(root, text="Publication Date")  
 plabel.pack()
 
 publication = tk.Text(root, height=1, width=140)
 publication.config(state="disabled", bg="#dddddd")
 publication.pack()
 
-slabel = tk.Label(root, text="Summary")  # Renamed the label
+slabel = tk.Label(root, text="Summary") 
 slabel.pack()
 
 summary = tk.Text(root, height=20, width=140)
 summary.config(state="disabled", bg="#dddddd")
 summary.pack()
 
-selabel = tk.Label(root, text="Sentiment")  # Renamed the label
+selabel = tk.Label(root, text="Sentiment")  
 selabel.pack()
 
 sentiment = tk.Text(root, height=1, width=140)
 sentiment.config(state="disabled", bg="#dddddd")
 sentiment.pack()
 
-ulabel = tk.Label(root, text="Enter URL")  # Renamed the label
+ulabel = tk.Label(root, text="Enter URL") 
 ulabel.pack()
 
 utext = tk.Text(root, height=1, width=140)
