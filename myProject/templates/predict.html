@@ -1,0 +1,304 @@
+<html>
+<head>
+  <link rel="stylesheet" href="..\static\css\nav.css" />
+</head>
+ <style>
+  @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+  body{
+    background-color: #f2f2f2;
+  }
+ h1 {
+  width:100%; 
+  float: center;
+  display: block;
+  background-color:#f2f2f2;
+  color:  #333;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 100px; 
+  height:100px;
+}
+h2{
+  width:100%; 
+  text-align: left;
+  display: block;
+  color: #333;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 100px; 
+  height:90px;
+  font-size: xx-large;
+}
+
+
+.list{
+  width:100%; 
+  text-align: left;
+  display: block;
+  color: #333;
+
+  vertical-align: middle;
+}
+li{
+  padding-bottom: 5px;
+}
+
+h3{
+  padding-top: 20px;
+  width:100%; 
+  float: center;
+  display: block;
+  color: #333;
+  text-align: left;
+  vertical-align: middle;
+}
+.heading{
+  padding-top: 30px;
+  font-size: 40px;
+}
+.container {
+  margin: 0 auto;
+  position: relative;
+  max-width: 700px;
+  width: 100%;
+  background: #fff;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  height: auto;
+  color: #333;
+  margin-bottom: 30px;
+}
+.container header {
+  font-size: 1.9rem;
+  color: #333;
+  font-weight: 800;
+  text-align: center;
+  text-decoration: underline;
+}
+footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background: #000;
+  padding: 20px 0;
+}
+
+footer div {
+  padding: 0 10px;
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+footer span {
+  color: #fff;
+}
+
+footer a {
+  padding: 0;
+}
+ </style>
+
+ <body>
+  <div class="navbar">
+    <nav>
+        <input type="checkbox" id="check" />
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <label class="logo">Harmony Guru</label>
+        <ul>
+
+            <li><a href="home">Home</a></li>
+        </ul>
+    </nav>
+</div>
+<div>
+  <h1 class="heading">Drawing from the responses provided, here's what we've uncovered</h1>
+</div>
+<div>
+
+  {% if prediction1 == "No stress" %}
+  <h1>You're riding the waves of tranquility, living a vibrant, stress-free life!</h1>
+  {% else %}   
+  {% if prediction1 == "Stress" %}
+  <h1>You are on mild Stress   </h1>
+    {% else %}
+    <h1>You are on  High Stress   </h1>
+        <br>
+        <br>
+        {% endif %}
+    <section class="container">
+      <header>
+        Let's explore strategies to alleviate stress
+    </header>
+      {% if anxiety_level == 2 %}
+      <h3>You can improve your anxiety by following</h3>
+      <ul class="list">
+        <li>- Practice mindfulness techniques like deep breathing and meditation.</li>
+        <li>- Communicate your needs clearly to establish boundaries with others..</li>
+      </ul>
+      
+        {% endif %}
+        
+        {% if self_esteem_vibe == 1 %}
+        <h3>You can improve your self-esteem by following</h3>
+        <ul class="list">
+          <li>- Practice self-affirmations daily to boost your confidence.</li>
+          <li>- Surround yourself with supportive and uplifting people.</li>
+        </ul>
+        
+        {% endif %}
+        
+        {% if mental_health_history == 1 %}
+        <h3>You can improve your mental health history by following</h3>
+        <ul class="list">
+          <li>- Seek professional help from a therapist or counselor.</li>
+          <li>- Consider joining support groups for shared experiences.</li>
+        </ul>
+        
+        {% endif %}
+        
+        {% if depression_symptoms == 2 %}
+        <h3>You can improve you depression by following</h3>
+        <ul class="list">
+          <li>- Reach out to a mental health professional for evaluation and support.</li>
+          <li>- Consider therapy or counseling to address underlying issues.</li>
+          <li>- Prioritize self-care activities such as exercise, healthy eating, and sufficient sleep.</li>
+        </ul>
+        
+        {% endif %}
+        
+        {% if headache_frequency == 2 %}
+        <h3>You can reduce frequent headaches by following</h3>
+        <ul class="list">
+          <li>- Ensure you stay hydrated by drinking enough water throughout the day.</li>
+          <li>- Maintain a regular sleep schedule and ensure you get enough rest.</li>
+        </ul>
+        
+
+        {% endif %}
+        
+        {% if blood_pressure == 2 %}
+        <h3>Managing Blood Pressure</h3>
+        <ul class="list">
+          <li>- Reduce sodium intake by avoiding processed and high-sodium foods.</li>
+          <li>- Engage in regular physical activity, for at least 30 minutes most days of the week.</li>
+        </ul>
+        {% endif %}
+        
+        {% if sleep_quality == 1 %}
+        <h3>Improving Sleep Quality</h3>
+        <ul class="list">
+          <li>- Establish a consistent sleep schedule .</li>
+          <li>- Create a relaxing bedtime routine, such as taking a warm bath, reading a book.</li>
+        </ul>
+        {% endif %}
+        
+        {% if breathing_problem == 2 %}
+        <h3>Addressing Breathing Problems</h3>
+        <ul class="list">
+          <li>- Practice deep breathing exercises daily to improve lung function and reduce shortness of breath.</li>
+          <li>- Avoid exposure to environmental pollutants such as smoke, dust, and allergens, which can exacerbate breathing difficulties.</li>
+        </ul>
+        {% endif %}
+        
+        {% if noise_irritation == 2 %}
+        <h3>Managing Noise Irritation</h3>
+        <ul class="list">
+          <li>- Use earplugs or noise-cancelling headphones to block out unwanted sounds, especially during sleep or when working.</li>
+          <li>- Create a quiet sanctuary in your home where you can retreat to relax and unwind, away from noisy environments.</li>
+        </ul>
+        {% endif %}
+        
+        {% if living_conditions == 1 %}
+        <h3>Improving Living Conditions</h3>
+        <ul class="list">
+          <li>- Keep your living space clean and well-ventilated to reduce indoor air pollution and promote overall health.</li>
+          <li>- Ensure access to basic amenities such as clean water, nutritious food, and adequate shelter to support a healthy lifestyle.</li>
+        </ul>
+        {% endif %}
+        
+        {% if academic_progress == 1 %}
+        <h3>Managing Academic Pressure</h3>
+        <ul class="list">
+          <li>- Break tasks into smaller, manageable steps to avoid feeling overwhelmed by academic demands.</li>
+          <li>- Practice stress-reduction techniques such as deep breathing, meditation, or yoga to cope with academic pressure.</li>
+        </ul>
+        {% endif %}
+        
+        {% if study_load == 2 %}
+        <h3>Managing Study Load</h3>
+        <ul class="list">
+          <li>- Create a study schedule and prioritize tasks to effectively manage your study load.</li>
+          <li>- Take regular breaks during study sessions to prevent burnout and maintain focus and productivity.</li>
+        </ul>
+        {% endif %}
+        
+        {% if teacher_student_relationship == 1 %}
+        <h3>Nurturing Teacher-Student Relationships</h3>
+        <ul class="list">
+          <li>- Communicate openly and respectfully with teachers.</li>
+          <li>- Seek support and guidance from teachers when needed.</li>
+        </ul>
+        {% endif %}
+        
+        {% if future_career == 2 %}
+        <h3>Planning for Future Careers</h3>
+        <ul class="list">
+          <li>- Explore various career options and interests.</li>
+          <li>- Seek guidance from mentors or career counselors.</li>
+        </ul>
+        {% endif %}
+        
+        {% if social_support == 1 %}
+        <h3>Seeking Social Support</h3>
+        <ul class="list">
+          <li>- Connect with supportive friends and family.</li>
+          <li>- Reach out to trusted adults or counselors for guidance.</li>
+        </ul>
+        {% endif %}
+        
+        {% if peer_pressure == 2 %}
+        <h3>Dealing with Peer Pressure</h3>
+        <ul class="list">
+          <li>- Stay true to your values and beliefs.</li>
+          <li>- Surround yourself with positive influences.</li>
+        </ul>
+        {% endif %}
+        
+        {% if extracurricular_involvement == 1 %}
+        <h3>Boosting Extracurricular Participation</h3>
+        <ul class="list">
+          <li>- Explore diverse activities beyond academics.</li>
+          <li>- Balance academics and extracurriculars.</li>
+        </ul>
+        {% endif %}
+        
+        {% if bullying_frequency == 2 %}
+        <h3>Dealing with Bullying</h3>
+        <ul class="list">
+          <li>- Speak up and report bullying incidents.</li>
+          <li>- Build a supportive network of friends.</li>
+        </ul>        {% endif %}
+        
+        {% endif %}
+        
+      </section>    
+      </div>
+      <footer>
+
+        <span>Copyright © 2024 All Rights Reserved</span>
+
+    </footer>
+        
+      </body>
+      </html>
