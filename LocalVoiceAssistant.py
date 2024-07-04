@@ -9,11 +9,11 @@ import re
 df = pd.read_csv('D:\ML_PROJECT\Responsedata.csv')
 # Extract the input and response values
 X = df[['Input1', 'Input2', 'Input3']].values.tolist()
-y = df['Response'].values.tolist()
+Y = df['Response'].values.tolist()
 
 # Train the decision tree model
 model = DecisionTreeClassifier()
-model.fit(X, y)
+model.fit(X, Y)
 
 # Implement voice recognition system
 r = sr.Recognizer()
