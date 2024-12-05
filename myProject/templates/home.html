@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<!---Coding By CodingLab | www.codinglabweb.com--->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!--<title>Registration Form in HTML CSS</title>-->
+    <!---Custom CSS File--->
+    <link rel="stylesheet" href="..\static\css\home.css" />
+    <link rel="stylesheet" href="..\static\css\nav.css" />
+    
+</head>
+
+<body>
+    <div class="navbar">
+        <nav>
+            <input type="checkbox" id="check" />
+            <label for="check" class="checkbtn">
+                <i class="fas fa-bars"></i>
+            </label>
+            <label class="logo">Harmony Guru</label>
+            <ul>
+
+                <li><a href="home">Home</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="inputForm">
+        <section class="container">
+            <header>
+                Simply answer few questions
+            </header>
+            <br>
+            <form method="post" action="/submit" class="form">
+                <div class="input-box">
+                    <label>How would you rate your anxiety level on a scale of 0 to 21?
+                    </label>
+                    <input type="number" min="0" max="21" id="anxietyInput" name="anxiety"
+                        placeholder="0 = 'Zen Master' calmness , 21 = 'Peak Adventure' thrill" required />
+                </div>
+
+                <div class="input-box">
+                    <label>On a scale of 0 to 30, how stellar is your self-esteem vibe?
+                    </label>
+                    <input type="number" min="0" max="30" id="selfEsteemInput" name="self_esteem"
+                        placeholder="0 = waiting for ignition , 30 = blasting through the atmosphere" required />
+                </div>
+
+                <div class="inputMental">
+                    <h3>Do you have any history of mental health issues?</h3>
+                    <div class="inputoptions">
+                        <div class="options">
+                            <input type="radio" id="menatal_1" name="mental_health" value="1"  />
+                            <label for="1">Yes</label>
+                        </div>
+                        <div class="options">
+                            <input type="radio" id="mental_0" name="mental_health" value="0" />
+                            <label for="0">No</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="input-box">
+                    <label>On a scale of 0 to 27, how often do you experience symptoms of
+                        depression?</label>
+                    <input type="number" min="0" max="37" id="depressionInput" name="depression" placeholder="0 = 'sparkling sunshine' , 27 = 'stormy seas'"
+                        required />
+                </div>
+
+                <div class="inputMental">
+                    <h3>How often do you have headaches?</h3>
+                    <div class="inputoptions">
+                        <div class="options headache">
+                            <input type="radio" id="headache_0" name="headache_frequency" value="0"  />
+                            <label for="0">Blissful</label>
+                        </div>
+                        <div class="options headache">
+                            <input type="radio" id="headache_1" name="headache_frequency" value="1" />
+                            <label for="1">Occasional</label>
+                        </div>
+                        <div class="options headache">
+                            <input type="radio" id="headache_2" name="headache_frequency" value="2" />
+                            <label for="2">Mild</label>
+                        </div>
+                        <div class="options headache">
+                            <input type="radio" id="headache_3" name="headache_frequency" value="3" />
+                            <label for="3">Moderate</label>
+                        </div>
+                        <div class="options headache">
+                            <input type="radio" id="headache_4" name="headache_frequency" value="4" />
+                            <label for="4">Severe</label>
+                        </div>
+                        <div class="options headache">
+                            <input type="radio" id="headache_5" name="headache_frequency" value="5" />
+                            <label for="5">Excruciating</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="inputMental">
+                    <h3>Blood Pressure</h3>
+                    <div class="inputoptions">
+                        <div class="options bp">
+                            <input type="radio" id="bp_1" name="blood_pressure" value="0"  />
+                            <label for="bp_1">Low</label>
+                        </div>
+                        <div class="options bp">
+                            <input type="radio" id="bp_2" name="blood_pressure" value="1" />
+                            <label for="bp_2">Normal</label>
+                        </div>
+                        <div class="options bp">
+                            <input type="radio" id="bp_3" name="blood_pressure" value="2" />
+                            <label for="bp_3">High</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="inputMental">
+                    <h3>Sleep Quality</h3>
+                    <div class="inputoptions">
+                        <div class="options sleep">
+                            <input type="radio" id="sq_0" name="sleep_quality" value="0"  />
+                            <label for="sq_0">Awful</label>
+                        </div>
+                        <div class="options sleep">
+                            <input type="radio" id="sq_1" name="sleep_quality" value="1" />
+                            <label for="sq_1">Poor</label>
+                        </div>
+                        <div class="options sleep">
+                            <input type="radio" id="sq_2" name="sleep_quality" value="2" />
+                            <label for="sq_2">Fair</label>
+                        </div>
+                        <div class="options sleep">
+                            <input type="radio" id="sq_3" name="sleep_quality" value="3" />
+                            <label for="sq_3">Good</label>
+                        </div>
+                        <div class="options sleep">
+                            <input type="radio" id="sq_4" name="sleep_quality" value="4" />
+                            <label for="sq_4">Excellent</label>
+                        </div>
+                        <div class="options sleep">
+                            <input type="radio" id="sq_5" name="sleep_quality" value="5" />
+                            <label for="sq_5">Exceptional</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="inputMental">
+                    <h3>Breathing Problem</h3>
+                    <div class="inputoptions">
+                        <div class="options">
+                            <input type="radio" id="brp_0" name="breathing_problem" value="0"  />
+                            <label for="brp_0">Never</label>
+                        </div>
+                        <div class="options">
+                            <input type="radio" id="brp_1" name="breathing_problem" value="1" />
+                            <label for="brp_1">Rarely</label>
+                        </div>
+                        <div class="options">
+                            <input type="radio" id="brp_2" name="breathing_problem" value="2" />
+                            <label for="brp_2">Occasionally</label>
+                        </div>
+                        <div class="options">
+                            <input type="radio" id="brp_3" name="breathing_problem" value="3" />
+                            <label for="brp_3">Sometimes</label>
+                        </div>
+                        <div class="options">
+                            <input type="radio" id="brp_4" name="breathing_problem" value="4" />
+                            <label for="brp_4">Frequently</label>
+                        </div>
+                        <div class="options">
+                            <input type="radio" id="brp_5" name="breathing_problem" value="5" />
+                            <label for="brp_5">Constantly</label>
+                        </div>
+
+                        <div class="inputMental">
+                            <h3>Irritation due to noise</h3>
+                            <div class="inputoptions">
+                              <div class="options">
+                                <input type="radio" id="ni_0" name="noise_irritation" value="0"  />
+                                <label for="ni_0">Never</label>
+                              </div>
+                              <div class="options">
+                                <input type="radio" id="ni_1" name="noise_irritation" value="1" />
+                                <label for="ni_1">Rarely</label>
+                              </div>
+                              <div class="options">
+                                <input type="radio" id="ni_2" name="noise_irritation" value="2" />
+                                <label for="ni_2">Occasionally</label>
+                              </div>
+                              <div class="options">
+                                <input type="radio" id="ni_3" name="noise_irritation" value="3" />
+                                <label for="ni_3">Sometimes</label>
+                              </div>
+                              <div class="options">
+                                <input type="radio" id="ni_4" name="noise_irritation" value="4" />
+                                <label for="ni_4">Frequently</label>
+                              </div>
+                              <div class="options">
+                                <input type="radio" id="ni_5" name="noise_irritation" value="5" />
+                                <label for="ni_5">Constantly</label>
+                              </div>
+                            </div>
+                          </div>
+                        
+                          <div class="inputMental">
+                            <h3>How would you rate the comfort and coziness of your living space?</h3>
+                            <div class="inputoptions">
+                              <div class="options livingcondition">
+                                <input type="radio" id="lc_0" name="living_conditions" value="0"  />
+                                <label for="lc_0">Horrible</label>
+                              </div>
+                              <div class="options livingcondition">
+                                <input type="radio" id="lc_1" name="living_conditions" value="1" />
+                                <label for="lc_1">Bad</label>
+                              </div>
+                              <div class="options livingcondition">
+                                <input type="radio" id="lc_2" name="living_conditions" value="2" />
+                                <label for="lc_2">Poor</label>
+                              </div>
+                              <div class="options livingcondition">
+                                <input type="radio" id="lc_3" name="living_conditions" value="3" />
+                                <label for="lc_3">Fair</label>
+                              </div>
+                              <div class="options livingcondition">
+                                <input type="radio" id="lc_4" name="living_conditions" value="4" />
+                                <label for="lc_4">Good</label>
+                              </div>
+                              <div class="options livingcondition">
+                                <input type="radio" id="lc_5" name="living_conditions" value="5" />
+                                <label for="lc_5">Excellent</label>
+                              </div>
+                            </div>
+                          </div>
+                          
+                          <div class="inputMental">
+                            <h3>How safe do you feel in society?</h3>
+                            <div class="inputoptions">
+                              <div class="options safety">
+                                <input type="radio" id="s_0" name="safety_feeling" value="0"  />
+                                <label for="s_0">Unsafe</label>
+                              </div>
+                              <div class="options safety">
+                                <input type="radio" id="s_1" name="safety_feeling" value="1" />
+                                <label for="s_1">Insecure</label>
+                              </div>
+                              <div class="options safety">
+                                <input type="radio" id="s_2" name="safety_feeling" value="2" />
+                                <label for="s_2">Neutral</label>
+                              </div>
+                              <div class="options safety">
+                                <input type="radio" id="s_3" name="safety_feeling" value="3" />
+                                <label for="s_3">Safe</label>
+                              </div>
+                              <div class="options safety">
+                                <input type="radio" id="s_4" name="safety_feeling" value="4" />
+                                <label for="s_4">Secure</label>
+                              </div>
+                              <div class="options safety">
+                                <input type="radio" id="s_5" name="safety_feeling" value="5" />
+                                <label for="s_5">Very Secure</label>
+                              </div>
+                            </div>
+                          </div>
+                        
+                          <div class="inputMental">
+                            <h3>Does your basic needs get fulfilled?</h3>
+                            <div class="inputoptions">
+                              <div class="options basic-needs">
+                                <input type="radio" id="bn_0" name="basic_needs_fulfillment" value="0"  />
+                                <label for="bn_0">Not at all</label>
+                              </div>
+                              <div class="options basic-needs">
+                                <input type="radio" id="bn_1" name="basic_needs_fulfillment" value="1" />
+                                <label for="bn_1">Rarely</label>
+                              </div>
+                              <div class="options basic-needs">
+                                <input type="radio" id="bn_2" name="basic_needs_fulfillment" value="2" />
+                                <label for="bn_2">Sometimes</label>
+                              </div>
+                              <div class="options basic-needs">
+                                <input type="radio" id="bn_3" name="basic_needs_fulfillment" value="3" />
+                                <label for="bn_3">Often</label>
+                              </div>
+                              <div class="options basic-needs">
+                                <input type="radio" id="bn_4" name="basic_needs_fulfillment" value="4" />
+                                <label for="bn_4">Mostly</label>
+                              </div>
+                              <div class="options basic-needs">
+                                <input type="radio" id="bn_5" name="basic_needs_fulfillment" value="5" />
+                                <label for="bn_5">Completely</label>
+                              </div>
+                            </div>
+                          </div>
+                        
+
+                          <div class="inputMental">
+                            <h3>how satisfied are you with your academic accomplishments and progress?</h3>
+                            <div class="inputoptions">
+                              <div class="options academic-progress">
+                                <input type="radio" id="ap_0" name="academic_progress" value="0"  />
+                                <label for="ap_0">Not Satisfied</label>
+                              </div>
+                              <div class="options academic-progress">
+                                <input type="radio" id="ap_1" name="academic_progress" value="1" />
+                                <label for="ap_1">Limited</label>
+                              </div>
+                              <div class="options academic-progress">
+                                <input type="radio" id="ap_2" name="academic_progress" value="2" />
+                                <label for="ap_2">Some Progress</label>
+                              </div>
+                              <div class="options academic-progress">
+                                <input type="radio" id="ap_3" name="academic_progress" value="3" />
+                                <label for="ap_3">Satisfactory</label>
+                              </div>
+                              <div class="options academic-progress">
+                                <input type="radio" id="ap_4" name="academic_progress" value="4" />
+                                <label for="ap_4">Good</label>
+                              </div>
+                              <div class="options academic-progress">
+                                <input type="radio" id="ap_5" name="academic_progress" value="5" />
+                                <label for="ap_5">Excellent</label>
+                              </div>
+                            </div>
+                          </div>
+                        
+                          <div class="inputMental">
+                            <h3>How would you rate the intensity of your current study workload?</h3>
+                            <div class="inputoptions">
+                              <div class="options study-load">
+                                <input type="radio" id="sl_0" name="study_load" value="0"  />
+                                <label for="sl_0">None</label>
+                              </div>
+                              <div class="options study-load">
+                                <input type="radio" id="sl_1" name="study_load" value="1" />
+                                <label for="sl_1">Light</label>
+                              </div>
+                              <div class="options study-load">
+                                <input type="radio" id="sl_2" name="study_load" value="2" />
+                                <label for="sl_2">Moderate</label>
+                              </div>
+                              <div class="options study-load">
+                                <input type="radio" id="sl_3" name="study_load" value="3" />
+                                <label for="sl_3">Heavy</label>
+                              </div>
+                              <div class="options study-load">
+                                <input type="radio" id="sl_4" name="study_load" value="4" />
+                                <label for="sl_4">Very Heavy</label>
+                              </div>
+                              <div class="options study-load">
+                                <input type="radio" id="sl_5" name="study_load" value="5" />
+                                <label for="sl_5">Overwhelming</label>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="inputMental">
+                            <h3>how would you rate the quality of your relationships with your teachers or professors?</h3>
+                            <div class="inputoptions">
+                              <div class="options teacher-student-relationship">
+                                <input type="radio" id="tsr_0" name="teacher_student_relationship" value="0"  />
+                                <label for="tsr_0">Very Poor</label>
+                              </div>
+                              <div class="options teacher-student-relationship">
+                                <input type="radio" id="tsr_1" name="teacher_student_relationship" value="1" />
+                                <label for="tsr_1">Poor</label>
+                              </div>
+                              <div class="options teacher-student-relationship">
+                                <input type="radio" id="tsr_2" name="teacher_student_relationship" value="2" />
+                                <label for="tsr_2">Fair</label>
+                              </div>
+                              <div class="options teacher-student-relationship">
+                                <input type="radio" id="tsr_3" name="teacher_student_relationship" value="3" />
+                                <label for="tsr_3">Good</label>
+                              </div>
+                              <div class="options teacher-student-relationship">
+                                <input type="radio" id="tsr_4" name="teacher_student_relationship" value="4" />
+                                <label for="tsr_4">Very Good</label>
+                              </div>
+                              <div class="options teacher-student-relationship">
+                                <input type="radio" id="tsr_5" name="teacher_student_relationship" value="5" />
+                                <label for="tsr_5">Excellent</label>
+                              </div>
+                            </div>
+                          </div>
+                        
+                          <div class="inputMental">
+                            <h3>How often do you consider your future career path with concern?</h3>
+                            <div class="inputoptions">
+                              <div class="options future-career">
+                                <input type="radio" id="fc_0" name="future_career" value="0"  />
+                                <label for="fc_0">Never</label>
+                              </div>
+                              <div class="options future-career">
+                                <input type="radio" id="fc_1" name="future_career" value="1" />
+                                <label for="fc_1">Rarely</label>
+                              </div>
+                              <div class="options future-career">
+                                <input type="radio" id="fc_2" name="future_career" value="2" />
+                                <label for="fc_2">Sometimes</label>
+                              </div>
+                              <div class="options future-career">
+                                <input type="radio" id="fc_3" name="future_career" value="3" />
+                                <label for="fc_3">Often</label>
+                              </div>
+                              <div class="options future-career">
+                                <input type="radio" id="fc_4" name="future_career" value="4" />
+                                <label for="fc_4">Frequently</label>
+                              </div>
+                              <div class="options future-career">
+                                <input type="radio" id="fc_5" name="future_career" value="5" />
+                                <label for="fc_5">Always</label>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="inputMental">
+                            <h3>How satisfied are you with the level of social support you receive?</h3>
+                            <div class="inputoptions">
+                              <div class="options social-support">
+                                <input type="radio" id="ss_0" name="social_support" value="0"  />
+                                <label for="ss_0">Not Satisfied</label>
+                              </div>
+                              <div class="options social-support">
+                                <input type="radio" id="ss_1" name="social_support" value="1" />
+                                <label for="ss_1">Slightly Satisfied</label>
+                              </div>
+                              <div class="options social-support">
+                                <input type="radio" id="ss_2" name="social_support" value="2" />
+                                <label for="ss_2">Moderately Satisfied</label>
+                              </div>
+                              <div class="options social-support">
+                                <input type="radio" id="ss_3" name="social_support" value="3" />
+                                <label for="ss_3">Highly Satisfied</label>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="inputMental">
+                            <h3>How frequently do you experience peer pressure influencing your decisions or actions?</h3>
+                            <div class="inputoptions">
+                              <div class="options peer-pressure">
+                                <input type="radio" id="pp_0" name="peer_pressure" value="0"  />
+                                <label for="pp_0">Never</label>
+                              </div>
+                              <div class="options peer-pressure">
+                                <input type="radio" id="pp_1" name="peer_pressure" value="1" />
+                                <label for="pp_1">Rarely</label>
+                              </div>
+                              <div class="options peer-pressure">
+                                <input type="radio" id="pp_2" name="peer_pressure" value="2" />
+                                <label for="pp_2">Sometimes</label>
+                              </div>
+                              <div class="options peer-pressure">
+                                <input type="radio" id="pp_3" name="peer_pressure" value="3" />
+                                <label for="pp_3">Often</label>
+                              </div>
+                              <div class="options peer-pressure">
+                                <input type="radio" id="pp_4" name="peer_pressure" value="4" />
+                                <label for="pp_4">Frequently</label>
+                              </div>
+                              <div class="options peer-pressure">
+                                <input type="radio" id="pp_5" name="peer_pressure" value="5" />
+                                <label for="pp_5">Always</label>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="inputMental">
+                            <h3>How involved are you in your extracurricular pursuits?</h3>
+                            <div class="inputoptions">
+                              <div class="options extracurricular-involvement">
+                                <input type="radio" id="ei_0" name="extracurricular_involvement" value="0"  />
+                                <label for="ei_0">Not Involved</label>
+                              </div>
+                              <div class="options extracurricular-involvement">
+                                <input type="radio" id="ei_1" name="extracurricular_involvement" value="1" />
+                                <label for="ei_1">Minimally Involved</label>
+                              </div>
+                              <div class="options extracurricular-involvement">
+                                <input type="radio" id="ei_2" name="extracurricular_involvement" value="2" />
+                                <label for="ei_2">Somewhat Involved</label>
+                              </div>
+                              <div class="options extracurricular-involvement">
+                                <input type="radio" id="ei_3" name="extracurricular_involvement" value="3" />
+                                <label for="ei_3">Moderately Involved</label>
+                              </div>
+                              <div class="options extracurricular-involvement">
+                                <input type="radio" id="ei_4" name="extracurricular_involvement" value="4" />
+                                <label for="ei_4">Highly Involved</label>
+                              </div>
+                              <div class="options extracurricular-involvement">
+                                <input type="radio" id="ei_5" name="extracurricular_involvement" value="5" />
+                                <label for="ei_5">Fully Involved</label>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="inputMental">
+                            <h3>How frequently do you experience bullying? </h3>
+                            <div class="inputoptions">
+                              <div class="options bullying-frequency">
+                                <input type="radio" id="bf_0" name="bullying_frequency" value="0"  />
+                                <label for="bf_0">Never</label>
+                              </div>
+                              <div class="options bullying-frequency">
+                                <input type="radio" id="bf_1" name="bullying_frequency" value="1" />
+                                <label for="bf_1">Rarely</label>
+                              </div>
+                              <div class="options bullying-frequency">
+                                <input type="radio" id="bf_2" name="bullying_frequency" value="2" />
+                                <label for="bf_2">Sometimes</label>
+                              </div>
+                              <div class="options bullying-frequency">
+                                <input type="radio" id="bf_3" name="bullying_frequency" value="3" />
+                                <label for="bf_3">Often</label>
+                              </div>
+                              <div class="options bullying-frequency">
+                                <input type="radio" id="bf_4" name="bullying_frequency" value="4" />
+                                <label for="bf_4">Frequently</label>
+                              </div>
+                              <div class="options bullying-frequency">
+                                <input type="radio" id="bf_5" name="bullying_frequency" value="5" />
+                                <label for="bf_5">Constantly</label>
+                              </div>
+                            </div>
+                          </div>
+                        <button id='submit' type="submit" value="Submit">Submit</button>
+            </form>
+        </section>
+    </div>
+    <footer>
+
+        <span>Copyright © 2024 All Rights Reserved</span>
+
+    </footer>
+    <script src="..\scripts\main.js"></script>
+</body>
+
+</html>
